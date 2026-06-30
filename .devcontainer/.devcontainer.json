@@ -1,0 +1,21 @@
+{
+    "name": "Laravel Development",
+    "image": "mcr.microsoft.com/devcontainers/php:8.3",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "22"
+        },
+        "ghcr.io/devcontainers/features/composer:1": {}
+    },
+    "postCreateCommand": "composer install && cp .env.example .env && php artisan key:generate",
+    "forwardPorts": [8000],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "xdebug.php-debug",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    }
+}
